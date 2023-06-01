@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  margin: 0;
+  box-sizing: border-box;
+
+  --dark-blue: hsl(233, 47%, 7%);
+  --destaurated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  
+  --transparent-white-main: hsla(0, 0%, 100%, 0.75);
+  --transparent-white-secondary: hsla(0, 0%, 100%, 0.6);
+
+  font-size: 15px;
+}
+
+body{
+  background-color: var(--dark-blue);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  height: 60rem;
+  background-color: var(--destaurated-blue);
+  border-radius: 10px;
+}
+
+.bg-cover {
+  background-image: url('./images/image-header-mobile.jpg');
+  height: 33%;
+  border-radius: 10px 10px 0 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-filter {
+  background-color: hsla(277, 91%, 62%, 0.5);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-container {
+  width: 100%;
+  height: 67%;
+}
+
+.card {
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-family: 'lexend deca', sans-serif;
+}
+
+.accent {
+  color: var(--soft-violet)
+}
+
+.subtext {
+  color: var(--transparent-white-main);
+  font-family: inter, sans-serif;
+  line-height: 2rem;
+}
+
+.card-header {
+  height: 50%;
+}
+
+.stats-list {
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.statistic {
+  margin-bottom: 0;
+  font-family: 'inter', sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  
+}
+
+.category {
+  margin-top: 0.5rem;
+  color: var(--transparent-white-secondary);
+  font-family: 'lexend deca', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+@media only screen and (min-width: 950px) {
+  .App {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 60rem;
+    height: 25rem;
+  }
+
+
+  .bg-cover {
+    background-image: url('./images/image-header-desktop.jpg');
+    height: 100%;
+    width: 50%;
+    border-radius: 0px 10px 10px 0;
+  }
+
+  .bg-filter {
+    border-radius: 0px 10px 10px 0;
+  }
+
+  .card-container {
+    width: 50%
+  }
+
+  .card {
+    margin: 3.5rem 5rem 2.5rem 3rem;
+    text-align: left;
+  }
+
+  .stats-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+ 
